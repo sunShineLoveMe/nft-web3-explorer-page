@@ -1,0 +1,10 @@
+.title {
+    display: flex;
+    width: 10rem;
+    align-items: center;
+}
+
+.title-text {
+    color: rgba(99, 156, 201, 1);
+    font-size: 1.2rem;
+}

@@ -1,0 +1,16 @@
+.useMetaBg {
+    display: flex;
+    width: 6rem;
+    align-items: center;
+}
+
+.metabtn {
+    display: flex;
+    background: rgb(70, 164, 245);
+    color: #fff;
+    width: 100%;
+    height: 2.8rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
