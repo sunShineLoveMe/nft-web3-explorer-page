@@ -4,6 +4,7 @@ import './App.css'
 import BottomBarComponent from "./bottombar/BottomBarComponent";
 import TopBarComponent from "./topbar/TopBarComponent";
 import ContentComponent from "./content/ContentComponent";
+import WalletComponent from './component/walletcomponent';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <TopBarComponent/>
       <ContentComponent/>
       <BottomBarComponent/>
+      <WalletComponent/>
     </div>
   );
 }
