@@ -2,4 +2,28 @@
     background: #6eb161;
     width: 100%;
     height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomIcon {
+    display: flex;
+    width: 8rem;
+    height: 2rem;
+    /* border: 1px solid red; */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.join_item {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.join_item img {
+    width: 100%;
+    height: 100%;
 }
