@@ -1,0 +1,33 @@
+.display-none {
+    display: none;
+}
+
+.wallet-page-bg {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;    
+}
+
+.wallet-page-panel {
+    background: #fff;
+    width: 30rem;
+    height: 14rem;
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    margin-left: -15rem;
+    top: 50%;
+    margin-top: -7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wallet-page-btn {
+    cursor: pointer;
+}
+
+

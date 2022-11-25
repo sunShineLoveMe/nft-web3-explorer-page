@@ -35,7 +35,9 @@ export default function useWalletComponent() {
 
     return (
         <div className='wallet-page-bg' onClick={cancel_click}>
-            <div className='wallet-page-panel' onClick={(e) => {metaMask_click(e)}}>{text}</div>
+            <div className='wallet-page-panel' onClick={(e) => {metaMask_click(e)}}>
+                <div className='wallet-page-btn'>{text}</div>
+            </div>
         </div>
     )
 }
