@@ -1,5 +1,6 @@
 .contentBg {
     background: rgba(216, 196, 109, 1);
     width: 100%;
+    /* height: calc(100%-6rem); */
     flex: 1;
 }
