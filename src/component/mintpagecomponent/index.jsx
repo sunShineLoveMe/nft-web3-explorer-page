@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Spin } from 'antd'
 import { getMintInfo, mint } from '../../utils/contractUtils';
 import { Store } from '../../Store'
 
@@ -35,9 +36,14 @@ export default function useMintPageComponent() {
   } 
 
   return (
+    {totalSupply} && {maxSupply} ? 
     <div className='mintpage'>
       <div className='mint-info'>当前mint进度 {totalSupply} / {maxSupply}</div>
       <div className='mint-btn' onClick={mintClick}>一键Mint</div>
     </div>
+    :
+    <div className='loading'>
+        <Spin size="large"/>
+    </div> 
   )
 }

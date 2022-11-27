@@ -57,9 +57,7 @@ export const maxSupplyToken = async() => {
 export const getMintInfo = async() => {
     // console.log(`进入getMintInfo方法`)
     const totalSupply = await totalSupplyToken();
-    console.log(`totalSupply: ${totalSupply}`)
     const maxSupply = await maxSupplyToken();
-    console.log(`maxSupply ${maxSupply}`)
     return [totalSupply, maxSupply];
 }
 

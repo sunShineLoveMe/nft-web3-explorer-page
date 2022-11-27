@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { getMetaDataList, ipfsToHttp } from '../../utils/contractUtils'
+import { Spin } from 'antd'
 import './index.css'
 
 export default function useNFTListComponent() {
@@ -22,8 +23,16 @@ export default function useNFTListComponent() {
     );
 
     return (
-        <div className='nft-list-container'>
-            {items}
-        </div>
+        {metadatalist} ? 
+                        <div className='nft-list-container'>
+                            {items}
+                        </div>
+                        :
+                        <div className='loading'>
+                            <Spin size="large"/>
+                        </div> 
+                        
+                        
+
     )
 }
