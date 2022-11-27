@@ -1,0 +1,23 @@
+.mintpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mint-info {
+    width: 10rem;
+    text-align: center;
+    /* color: #fff; */
+}
+
+.mint-btn {
+    width: 6rem;
+    height: 2rem;
+    background: rgba(70, 164, 245, 1);
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}

@@ -47,6 +47,35 @@ export const getMetaDataList = async () => {
     return list;
 }
 
+// 获取最大可mint的数量
+export const maxSupplyToken = async() => {
+    const contract = getContract()
+    return await contract.MAX_SUPPLY()
+}
+
+// 同时返回当前mint总数和最大mint总数
+export const getMintInfo = async() => {
+    // console.log(`进入getMintInfo方法`)
+    const totalSupply = await totalSupplyToken();
+    console.log(`totalSupply: ${totalSupply}`)
+    const maxSupply = await maxSupplyToken();
+    console.log(`maxSupply ${maxSupply}`)
+    return [totalSupply, maxSupply];
+}
+
+// mint功能，这里同样是使用metamask进行签名，调用该方法MetaMask会弹出交易确认按钮
+export const mint = async () => {
+    const contract = getContract();
+    const provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
+    const signer = provider.getSigner();
+    const contractWithSigner = contract.connect(signer);
+    const price = await contract.mintPrice();
+    console.log("price is" + price);
+    const tx = await contractWithSigner.mintNftMeta(1, { value: price });
+    console.log(tx.hash);
+    await tx.wait();
+}
+
 // 获取合约
 const getContract = () => {
     const provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
