@@ -39,7 +39,7 @@ export const parseMetaData = async (TokenURI) => {
 export const getMetaDataList = async () => {
     const totalSupply = await totalSupplyToken();
     const list = []
-    for (let tokenID = 1; tokenID <= totalSupply; tokenID++) {
+    for (let tokenID = 1; tokenID < totalSupply; tokenID++) {
         const tokenURI = await getTokenURI(tokenID);
         const res = await parseMetaData(tokenURI);
         list.push(res);

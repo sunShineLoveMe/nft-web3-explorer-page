@@ -8,7 +8,6 @@ export default function useNFTListComponent() {
 
     useEffect(() => {
         getMetaDataList().then((arr) => {
-            console.log('加载图片....');
             setMetadatalist(arr)
         }).catch((err) => {
             console.log(`err is ${err}`);
@@ -23,8 +22,8 @@ export default function useNFTListComponent() {
     );
 
     return (
-        <div>
-            <span>{items}</span>
+        <div className='nft-list-container'>
+            {items}
         </div>
     )
 }
