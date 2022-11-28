@@ -77,7 +77,7 @@ export const mint = async () => {
 // 获取合约
 const getContract = () => {
     const provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
-    const address = "0x405a13cB7f7b939B998dcBceDF61a15568Da4744";
+    const address = "0x34A9E5de5aaC86cE02Ef05cC8c2e61AeC07161B1";
     const abi = require("../abi/NftMeta.json");
     return new ethers.Contract(address, abi, provider);
 }

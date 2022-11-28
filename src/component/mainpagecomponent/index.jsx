@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { getListData } from '../../utils/graphqlUtils'
 import './index.css'
 
 export default function useMainPageComponent() {
+
+    useEffect(() => {
+        getListData().then(res => {
+            console.log(res)
+        })
+    }, [])
+
+    // const 
+
     return (
         <div className='main-page'>
             <h1 className='overview-title'>
